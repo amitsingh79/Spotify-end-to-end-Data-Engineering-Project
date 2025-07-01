@@ -95,25 +95,24 @@ A complete data engineering pipeline that extracts Spotify music data using the 
 ```
   pip install -r requirements.txt
 ```
-3.Install dependencies
-```
-  pip install -r requirements.txt
-```
-4. Configure Spotify credentials In credentials.cfg (add your client_id, client_secret, and redirect_uri)
-
+3. Configure Spotify credentials In credentials.cfg
+   -add your client_id
+   -client_secret
+   -redirect_uri
+   
 -Run the ETL script
 ```
   python scripts/spotify_api_to_s3.py
 ```
-5.Set up Glue jobs and Athena tables
+4.Set up Glue jobs and Athena tables
 
-6.Use Glue to convert JSON → Parquet
+5.Use Glue to convert JSON → Parquet
 
-7.Create external tables in Athena using athena_queries/create_tables.sql
+6.Create external tables in Athena using athena_queries/create_tables.sql
 
-8.Analyze data with custom SQL
+7.Analyze data with custom SQL
 
-9.📊 Sample Athena Query
+8.📊 Sample Athena Query
 sql
 ```
 -- Top 10 Artists by Track Count
