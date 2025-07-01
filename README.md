@@ -88,17 +88,23 @@ A complete data engineering pipeline that extracts Spotify music data using the 
 
 ### ⚙️ Setup Instructions
 1. **Clone the repo**
+   ```bash
+   git clone https://github.com/amitsingh79/Spotify-end-to-end-Data-Engineering-Project.git
+   cd Spotify-end-to-end-Data-Engineering-Project
+2.
+```
+  pip install -r requirements.txt
+```
+3.Install dependencies
+```
+  pip install -r requirements.txt
+```
+4. Configure Spotify credentials In credentials.cfg (add your client_id, client_secret, and redirect_uri)
 
-pip install -r requirements.txt
-Install dependencies
-
-
-
-2.pip install -r requirements.txt
-3. Configure Spotify credentials In credentials.cfg (add your client_id, client_secret, and redirect_uri)
-
-4.Run the ETL script
-python scripts/spotify_api_to_s3.py
+-Run the ETL script
+```
+  python scripts/spotify_api_to_s3.py
+```
 5.Set up Glue jobs and Athena tables
 
 6.Use Glue to convert JSON → Parquet
@@ -109,20 +115,22 @@ python scripts/spotify_api_to_s3.py
 
 9.📊 Sample Athena Query
 sql
-
+```
 -- Top 10 Artists by Track Count
 SELECT artist_name, COUNT(*) AS track_count
 FROM spotify_tracks
 GROUP BY artist_name
 ORDER BY track_count DESC
 LIMIT 10;
-🚧 Future Enhancements
+```
 
-Add Apache Airflow for orchestration
+##🚧 Future Enhancements
 
-Integrate with Amazon QuickSight for BI dashboards
+-Add Apache Airflow for orchestration
 
-Add support for real-time streaming using Kafka + Spark
+-Integrate with Amazon QuickSight for BI dashboards
 
-Dockerize the ETL scripts for containerized execution
+-Add support for real-time streaming using Kafka + Spark
+
+-Dockerize the ETL scripts for containerized execution
 
